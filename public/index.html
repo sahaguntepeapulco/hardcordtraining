@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardcore Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos CSS adicionales aquí */
+        body {
+            background-image: url('hc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }    
+        .falta-pago {
+           color: green;
+        }
+        /* Estilo del botón "Eliminar" */
+        .delete-btn {
+            background-color: #ffc107; /* Color amarillo */
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #e0a800; /* Un poco más oscuro al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hardcore Training</h1>
+        <form id="paymentForm">
+            <!-- Campos del formulario (nombre, tipo de pago, monto, etc.) -->
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Nombre" required>
+
+            <label for="paymentType"></label>
+            <select id="paymentType" required>
+                <option value="Mensual">Mensual</option>
+                <option value="Semanal">Semanal</option>
+            </select>
+
+            <label for="amount"></label>
+            <input type="number" id="amount" placeholder="Monto" required>
+
+            <div class="date-container">
+                <label for="paymentDate"></label>
+                <input type="date" id="paymentDate" required>
+            </div>
+            <button type="submit" class="submit-btn">Agregar Pago</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Pagos Registrados</h2>
+        <table id="paymentsTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Pago M</th>
+                    <th>Pago S</th>
+                    <th>Pago</th>
+                    <th>Acciones</th> <!-- Nueva columna para el botón "Eliminar" -->
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Total Ingresos: <span id="totalIncome">0</span></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
