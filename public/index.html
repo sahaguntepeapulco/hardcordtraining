@@ -15,20 +15,27 @@
             color: #ffffff;
         }    
         .falta-pago {
-           color: green;
+            color: green;
         }
         /* Estilo del botón "Eliminar" */
         .delete-btn {
-            background-color: #ffc107; /* Color amarillo */
-            color: #000;
+            background-color: #008000; /* Color verde */
+            color: #ffffff; /* Color blanco para la 'X' */
             border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 10px 15px;
+            border-radius: 50%; /* Hace el botón redondo */
+            font-weight: bold;
+            font-size: 1.5em; /* Aumenta el tamaño de la 'X' */
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
         }
 
         .delete-btn:hover {
-            background-color: #e0a800; /* Un poco más oscuro al pasar el cursor */
+            background-color: #006400; /* Un verde más oscuro al pasar el cursor */
         }
     </style>
 </head>
@@ -66,7 +73,7 @@
                     <th>Pago M</th>
                     <th>Pago S</th>
                     <th>Pago</th>
-                    <th>Acciones</th> <!-- Nueva columna para el botón "Eliminar" -->
+                    <th>Brr</th> <!-- Nueva columna para el botón "Eliminar" -->
                 </tr>
             </thead>
             <tbody></tbody>
