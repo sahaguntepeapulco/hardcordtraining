@@ -27,7 +27,7 @@ function addRowToTable(payment) {
         <td>${payment.paymentType === 'Mensual' ? payment.amount : 0}</td>
         <td>${payment.paymentType === 'Semanal' ? payment.amount : 0}</td>
         <td class="${faltaPago ? 'falta-pago' : ''}">${faltaPago ? 'No' : 'Sí'}</td>
-        <td><button class="delete-btn" data-payment-id="${payment.paymentId}">Eliminar</button></td>
+        <td><button class="delete-btn" data-payment-id="${payment.paymentId}">X</button></td>
     `;
 }
 
